@@ -1,0 +1,26 @@
+<script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
+ 
+<script>
+    window.botpressWebChat.init({
+        "botId": “4493a67c-a671-446e-bd81-127bd5a10d0c",
+        "clientId": "4493a67c-a671-446e-bd81-127bd5a10d0c",
+ 
+        "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
+        "messagingUrl": "https://messaging.botpress.cloud",
+ 
+        "botName": "Test",
+ 
+        "containerWidth": "100%25",
+        "layoutWidth": "100%25",
+ 
+        "hideWidget": true,
+        "disableAnimations": true,
+    });
+ 
+    window.botpressWebChat.onEvent(
+        function () {
+            window.botpressWebChat.sendEvent({ type: "show" });
+        },
+        ["LIFECYCLE.LOADED"]
+    );
+</script>
